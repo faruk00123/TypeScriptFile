@@ -83,4 +83,23 @@ class BankAcc {
 const Acc1 = new BankAcc('Omar', 1000);
 console.log(Acc1.AccName);
 Acc1.showBalance();
+class mul {
+    name;
+    constructor(name) {
+        this.name = name;
+    }
+    cat() {
+        console.log(`${this.name} Mao Mao`);
+    }
+}
+// Inheritance
+class Dog extends mul {
+    dog() {
+        console.log(`${this.name} gao gao`);
+    }
+}
+const myAnimal = new Dog("Cat");
+myAnimal.cat();
+const myAnimal2 = new Dog("Dog");
+myAnimal2.dog();
 //# sourceMappingURL=app.js.map
