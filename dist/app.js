@@ -43,6 +43,7 @@ user2.age = 20;
 console.log(user2.name, "and", user2.age);
 user2.greet();
 // Constructor and modifiers (public, private, protected)
+//Constructor
 class AllData {
     name;
     age;
@@ -65,4 +66,21 @@ NewUser.GET();
 console.log(NewUser.name, NewUser.age, NewUser.IsActive, NewUser.AllRoll[0], NewUser.Info);
 const NewUser2 = new AllData("Faruk", 40, true, [1, 21], ["sumi", 21, false]);
 console.log(NewUser2.name, NewUser2.age, NewUser2.IsActive, NewUser2.AllRoll[0], NewUser2.Info);
+//modifiers (public, private, protected)
+class BankAcc {
+    AccName;
+    AccBalance;
+    AccType;
+    constructor(AccName, AccBalance) {
+        this.AccName = AccName;
+        this.AccBalance = AccBalance;
+        this.AccType = 'Savings';
+    }
+    showBalance() {
+        console.log(`Your account Balance: ${this.AccBalance}`);
+    }
+}
+const Acc1 = new BankAcc('Omar', 1000);
+console.log(Acc1.AccName);
+Acc1.showBalance();
 //# sourceMappingURL=app.js.map
