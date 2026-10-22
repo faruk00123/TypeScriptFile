@@ -63,4 +63,6 @@ class AllData {
 const NewUser = new AllData("Omar", 21, false, [10, 201], ["tamim", 214, true]);
 NewUser.GET();
 console.log(NewUser.name, NewUser.age, NewUser.IsActive, NewUser.AllRoll[0], NewUser.Info);
+const NewUser2 = new AllData("Faruk", 40, true, [1, 21], ["sumi", 21, false]);
+console.log(NewUser2.name, NewUser2.age, NewUser2.IsActive, NewUser2.AllRoll[0], NewUser2.Info);
 //# sourceMappingURL=app.js.map
