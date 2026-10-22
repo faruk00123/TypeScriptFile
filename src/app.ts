@@ -63,3 +63,29 @@ user2.name = "Md. Faruk"
 user2.age = 20
 console.log(user2.name ,"and", user2.age)
 user2.greet()
+
+
+// Constructor and modifiers (public, private, protected)
+class AllData {
+    name: string;
+    age: number;
+    IsActive: boolean;
+    AllRoll: number[];
+    Info?: [string, number, boolean] 
+
+    constructor(name: string, age: number, IsActive: boolean, AllRoll: number[], Info: [string, number, boolean]){
+        this.name = name;
+        this.age = age;
+        this.IsActive = IsActive;
+        this.AllRoll = AllRoll;
+        this.Info = Info
+    }
+
+    GET(){
+        console.log(`Hello Md: ${this.name}`)
+    }
+}
+
+const NewUser = new AllData("Omar", 21, false, [10, 201], ["tamim", 214, true])
+NewUser.GET()
+console.log(NewUser.name, NewUser.age, NewUser.IsActive, NewUser.AllRoll[0], NewUser.Info)
