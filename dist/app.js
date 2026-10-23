@@ -102,4 +102,15 @@ const myAnimal = new Dog("Cat");
 myAnimal.cat();
 const myAnimal2 = new Dog("Dog");
 myAnimal2.dog();
+class Car {
+    start() {
+        console.log("Car Start");
+    }
+    stop() {
+        console.log("Car Stop");
+    }
+}
+const MyCar = new Car;
+MyCar.start();
+MyCar.stop();
 //# sourceMappingURL=app.js.map

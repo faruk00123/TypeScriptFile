@@ -132,3 +132,21 @@ const myAnimal = new Dog("Cat")
 myAnimal.cat()
 const myAnimal2 = new Dog("Dog")
 myAnimal2.dog()
+
+
+// implements
+interface Driveable{
+    start: ()=> void;
+    stop: ()=> void;
+}
+class Car implements Driveable {
+   start (){
+    console.log("Car Start")
+   }
+   stop () {
+      console.log("Car Stop")
+   }
+}
+const MyCar = new Car;
+MyCar.start();
+MyCar.stop();
