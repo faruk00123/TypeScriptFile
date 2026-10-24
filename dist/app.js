@@ -113,4 +113,24 @@ class Car {
 const MyCar = new Car;
 MyCar.start();
 MyCar.stop();
+class Cara {
+    brand;
+    speed;
+    years = 2026;
+    constructor(brand, speed) {
+        this.brand = brand;
+        this.speed = speed;
+    }
+    move() {
+        console.log(`The ${this.brand} car is moving at ${this.speed} km/h.`);
+    }
+}
+class SubCar extends Cara {
+    charg() {
+        console.log(`${this.brand}. ${this.years} is charging...`);
+    }
+}
+const tesla = new SubCar('Tesla Model 3', 122);
+console.log(tesla.brand);
+tesla.charg();
 //# sourceMappingURL=app.js.map

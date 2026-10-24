@@ -150,3 +150,31 @@ class Car implements Driveable {
 const MyCar = new Car;
 MyCar.start();
 MyCar.stop();
+
+
+// Project 
+interface Vehicle {
+    brand: string;
+    speed: number;
+    move(): void;
+}
+class Cara implements Vehicle{
+    protected years: number = 2026
+
+    constructor(public brand: string, public speed: number){
+    }
+
+    move(): void {
+         console.log(`The ${this.brand} car is moving at ${this.speed} km/h.`)
+    }
+}
+
+class SubCar extends Cara {
+   charg (){
+    console.log(`${this.brand}. ${this.years} is charging...`)
+   }
+}
+
+const tesla = new SubCar('Tesla Model 3', 122)
+console.log(tesla.brand)
+tesla.charg();
