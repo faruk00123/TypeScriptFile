@@ -178,3 +178,14 @@ class SubCar extends Cara {
 const tesla = new SubCar('Tesla Model 3', 122)
 console.log(tesla.brand)
 tesla.charg();
+
+
+
+// Generic functions and interfaces
+function logData <T>(data: T){
+    console.log(data)
+}
+logData<string>("Omar")
+logData<number>(201)
+logData<boolean>(true)
+logData<string[]>(["Hello", "Hi"])
