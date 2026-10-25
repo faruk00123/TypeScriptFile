@@ -181,7 +181,7 @@ tesla.charg();
 
 
 
-// Generic functions and interfaces
+// Generic functions
 function logData <T>(data: T){
     console.log(data)
 }
@@ -189,3 +189,23 @@ logData<string>("Omar")
 logData<number>(201)
 logData<boolean>(true)
 logData<string[]>(["Hello", "Hi"])
+
+
+class Obj{
+    id: number;
+    name: string;
+    constructor(id: number, name: string){
+        this.id = id;
+        this.name = name
+    }
+}
+const IdFun = <T extends Obj>(item: T):void=>{
+  console.log(item.id)
+  console.log(item.name)
+}
+
+IdFun({id: 200, name: "Omar"})
+function Fun2 <T extends Obj>(items: T):T{
+    return items
+}
+console.log(Fun2({id: 22, name: "Tamim"}))

@@ -133,7 +133,7 @@ class SubCar extends Cara {
 const tesla = new SubCar('Tesla Model 3', 122);
 console.log(tesla.brand);
 tesla.charg();
-// Generic functions and interfaces
+// Generic functions
 function logData(data) {
     console.log(data);
 }
@@ -141,4 +141,21 @@ logData("Omar");
 logData(201);
 logData(true);
 logData(["Hello", "Hi"]);
+class Obj {
+    id;
+    name;
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+}
+const IdFun = (item) => {
+    console.log(item.id);
+    console.log(item.name);
+};
+IdFun({ id: 200, name: "Omar" });
+function Fun2(items) {
+    return items;
+}
+console.log(Fun2({ id: 22, name: "Tamim" }));
 //# sourceMappingURL=app.js.map
