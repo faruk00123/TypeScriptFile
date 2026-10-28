@@ -184,4 +184,18 @@ handleApiResponse({
         price: 500,
     }
 });
+//string array and object data successfully done.
+handleApiResponse({
+    status: 200,
+    message: "User array and object data successfully done.",
+    data: [
+        "Omar",
+        740282,
+        true,
+        {
+            taile: "Bangla Books",
+            price: 200
+        }
+    ]
+});
 //# sourceMappingURL=app.js.map
