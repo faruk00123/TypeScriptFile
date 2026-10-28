@@ -232,9 +232,19 @@ function handleApiResponse<T>(response: ApiResponse<T>): T{
    }
 } 
 
-// step-3 for a user api response
+//for a user api response
 handleApiResponse<string>({
     status: 200,
     message: "User fetched successfully.",
     data: "user"
+})
+
+//for a product
+handleApiResponse<{taitle: string, price: number}>({
+    status: 200,
+    message: "User product successfully.",
+    data: {
+        taitle: "Apple",
+        price: 500,
+    }
 })

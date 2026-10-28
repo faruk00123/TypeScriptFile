@@ -169,10 +169,19 @@ function handleApiResponse(response) {
         throw new Error("Somthing went wrong! or Bad API Request.");
     }
 }
-// step-3 for a user api response
+//for a user api response
 handleApiResponse({
     status: 200,
     message: "User fetched successfully.",
     data: "user"
+});
+//for a product
+handleApiResponse({
+    status: 200,
+    message: "User product successfully.",
+    data: {
+        taitle: "Apple",
+        price: 500,
+    }
 });
 //# sourceMappingURL=app.js.map
