@@ -141,6 +141,7 @@ logData("Omar");
 logData(201);
 logData(true);
 logData(["Hello", "Hi"]);
+// Constraints and Generic functions
 class Obj {
     id;
     name;
@@ -158,4 +159,20 @@ function Fun2(items) {
     return items;
 }
 console.log(Fun2({ id: 22, name: "Tamim" }));
+// step-2 write to a function to fetcha api
+function handleApiResponse(response) {
+    if (response.status === 200) {
+        console.log("Success: ", response.message);
+        return response.data;
+    }
+    else {
+        throw new Error("Somthing went wrong! or Bad API Request.");
+    }
+}
+// step-3 for a user api response
+handleApiResponse({
+    status: 200,
+    message: "User fetched successfully.",
+    data: "user"
+});
 //# sourceMappingURL=app.js.map

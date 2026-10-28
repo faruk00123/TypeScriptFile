@@ -191,6 +191,7 @@ logData<boolean>(true)
 logData<string[]>(["Hello", "Hi"])
 
 
+// Constraints and Generic functions
 class Obj{
     id: number;
     name: string;
@@ -209,3 +210,31 @@ function Fun2 <T extends Obj>(items: T):T{
     return items
 }
 console.log(Fun2({id: 22, name: "Tamim"}))
+
+
+
+// API response handler.
+
+// step-1 api response interface (generics)
+interface ApiResponse<T>{
+    status: number;
+    message: string;
+    data: T
+}
+
+// step-2 write to a function to fetcha api
+function handleApiResponse<T>(response: ApiResponse<T>): T{
+   if(response.status === 200){
+    console.log("Success: ", response.message)
+    return response.data
+   }else{
+    throw new Error("Somthing went wrong! or Bad API Request.")
+   }
+} 
+
+// step-3 for a user api response
+handleApiResponse<string>({
+    status: 200,
+    message: "User fetched successfully.",
+    data: "user"
+})
