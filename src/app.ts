@@ -213,6 +213,8 @@ console.log(Fun2({id: 22, name: "Tamim"}))
 
 
 
+
+
 // API response handler.
 
 // step-1 api response interface (generics)
@@ -250,16 +252,3 @@ handleApiResponse<{taitle: string, price: number}>({
 })
 
 //string array and object data successfully done.
-handleApiResponse<[string, number, boolean, {taile: string, price: number}]>({
-    status: 200,
-    message: "User array and object data successfully done.",
-    data: [
-        "Omar",
-        740282,
-        true,
-        {
-            taile: "Bangla Books",
-            price: 200
-        }
-    ]
-})
