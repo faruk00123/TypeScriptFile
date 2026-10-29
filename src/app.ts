@@ -265,3 +265,25 @@ handleApiResponse<[string, number, boolean, {taile: string, price: number}]>({
         }
     ]
 })
+
+
+
+// enums project
+enum PostStatus {
+    Draft = 'DRAFT',
+    Published = 'PUBLISHED',
+    Archived =  'ARCHIVED'
+}
+
+type BlogType= {
+    title: string;
+    content: string;
+    status: PostStatus
+}
+
+const post1: BlogType = {
+   title: 'Hello',
+   content: "Hi",
+   status: PostStatus.Draft
+}
+console.log(post1.status)

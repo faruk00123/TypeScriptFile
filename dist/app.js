@@ -198,4 +198,17 @@ handleApiResponse({
         }
     ]
 });
+// enums project
+var PostStatus;
+(function (PostStatus) {
+    PostStatus["Draft"] = "DRAFT";
+    PostStatus["Published"] = "PUBLISHED";
+    PostStatus["Archived"] = "ARCHIVED";
+})(PostStatus || (PostStatus = {}));
+const post1 = {
+    title: 'Hello',
+    content: "Hi",
+    status: PostStatus.Draft
+};
+console.log(post1.status);
 //# sourceMappingURL=app.js.map
