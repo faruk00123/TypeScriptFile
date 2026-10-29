@@ -169,3 +169,99 @@ class Cara implements Vehicle{
     }
 }
 
+class SubCar extends Cara {
+   charg (){
+    console.log(`${this.brand}. ${this.years} is charging...`)
+   }
+}
+
+const tesla = new SubCar('Tesla Model 3', 122)
+console.log(tesla.brand)
+tesla.charg();
+
+
+
+// Generic functions
+function logData <T>(data: T){
+    console.log(data)
+}
+logData<string>("Omar")
+logData<number>(201)
+logData<boolean>(true)
+logData<string[]>(["Hello", "Hi"])
+
+
+// Constraints and Generic functions
+class Obj{
+    id: number;
+    name: string;
+    constructor(id: number, name: string){
+        this.id = id;
+        this.name = name
+    }
+}
+const IdFun = <T extends Obj>(item: T):void=>{
+  console.log(item.id)
+  console.log(item.name)
+}
+
+IdFun({id: 200, name: "Omar"})
+function Fun2 <T extends Obj>(items: T):T{
+    return items
+}
+console.log(Fun2({id: 22, name: "Tamim"}))
+
+
+
+
+
+// API response handler.
+
+// step-1 api response interface (generics)
+interface ApiResponse<T>{
+    status: number;
+    message: string;
+    data: T
+}
+
+// step-2 write to a function to fetcha api
+function handleApiResponse<T>(response: ApiResponse<T>): T{
+   if(response.status === 200){
+    console.log("Success: ", response.message)
+    return response.data
+   }else{
+    throw new Error("Somthing went wrong! or Bad API Request.")
+   }
+} 
+
+//for a user api response
+handleApiResponse<string>({
+    status: 200,
+    message: "User fetched successfully.",
+    data: "user"
+})
+
+//for a product
+handleApiResponse<{taitle: string, price: number}>({
+    status: 200,
+    message: "User product successfully.",
+    data: {
+        taitle: "Apple",
+        price: 500,
+    }
+})
+
+//string array and object data successfully done.
+handleApiResponse<[string, number, boolean, {taile: string, price: number}]>({
+    status: 200,
+    message: "User array and object data successfully done.",
+    data: [
+        "Omar",
+        740282,
+        true,
+        {
+            taile: "Bangla Books",
+            price: 200
+        }
+    ]
+})
