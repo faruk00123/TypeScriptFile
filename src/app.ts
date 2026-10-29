@@ -1,40 +1,5 @@
 // union and Intersection types
 
-// 1 union types(|)
-type ProductID = string | number | boolean
-function GetProduct(id: ProductID){
-   console.log(id)
-}
-GetProduct(102)
-GetProduct("ID123")
-GetProduct(true)
-
-// 2 Intersection type (&)
-type User = {
-    id: number;
-    name: string;
-}
-type Admin = {
-    isAdmin: boolean;
-}
-type AdminUser = User & Admin;
-
-const admin: AdminUser = {
-    id: 123,
-    name: "Omar",
-    isAdmin: true
-}
-console.log(admin) 
-
-
-
-// literal types 
-type Action = 'start' | 'pause' | 'submit' | 'reset';
-const handle = (action: Action)=> {
-    console.log("Action :", action)
-}
-handle("start")
-handle("submit")
 
 
 // Defining classes
