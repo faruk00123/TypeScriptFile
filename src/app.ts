@@ -284,6 +284,16 @@ type BlogType= {
 const post1: BlogType = {
    title: 'Hello',
    content: "Hi",
-   status: PostStatus.Draft
+   status: PostStatus.Published
 }
+console.log(post1)
 console.log(post1.status)
+
+
+const post2: BlogType = {
+   title: 'Hey',
+   content: "I Can JavaScript",
+   status: PostStatus.Archived
+}
+console.log(post2)
+console.log(post2.status)

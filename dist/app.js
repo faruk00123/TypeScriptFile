@@ -208,7 +208,15 @@ var PostStatus;
 const post1 = {
     title: 'Hello',
     content: "Hi",
-    status: PostStatus.Draft
+    status: PostStatus.Published
 };
+console.log(post1);
 console.log(post1.status);
+const post2 = {
+    title: 'Hey',
+    content: "I Can JavaScript",
+    status: PostStatus.Archived
+};
+console.log(post2);
+console.log(post2.status);
 //# sourceMappingURL=app.js.map
