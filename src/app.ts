@@ -19,6 +19,12 @@ type Admin = {
 }
 type AdminUser = User & Admin;
 
+const admin: AdminUser = {
+    id: 123,
+    name: "Omar",
+    isAdmin: true
+}
+console.log(admin) 
 
 
 
