@@ -9,22 +9,7 @@ GetProduct(102)
 GetProduct("ID123")
 GetProduct(true)
 
-// 2 Intersection type (&)
-type User = {
-    id: number;
-    name: string;
-}
-type Admin = {
-    isAdmin: boolean;
-}
-type AdminUser = User & Admin;
 
-const admin: AdminUser = {
-    id: 123,
-    name: "Omar",
-    isAdmin: true
-}
-console.log(admin) 
 
 
 
