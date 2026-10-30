@@ -122,17 +122,6 @@ class mul {
         console.log(`${this.name} Mao Mao`)
     }
 }
-// Inheritance
-class Dog extends mul {
-   dog(){
-    console.log(`${this.name} gao gao`)
-   }
-}
-const myAnimal = new Dog("Cat")
-myAnimal.cat()
-const myAnimal2 = new Dog("Dog")
-myAnimal2.dog()
-
 
 // implements
 interface Driveable{
