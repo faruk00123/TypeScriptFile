@@ -275,6 +275,12 @@ enum PostStatus {
     Archived =  'ARCHIVED'
 }
 
+type BlogType= {
+    title: string;
+    content: string;
+    status: PostStatus
+}
+
 const post1: BlogType = {
    title: 'Hello',
    content: "Hi",
