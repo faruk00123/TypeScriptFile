@@ -191,6 +191,15 @@ logData<boolean>(true)
 logData<string[]>(["Hello", "Hi"])
 
 
+// Constraints and Generic functions
+class Obj{
+    id: number;
+    name: string;
+    constructor(id: number, name: string){
+        this.id = id;
+        this.name = name
+    }
+}
 const IdFun = <T extends Obj>(item: T):void=>{
   console.log(item.id)
   console.log(item.name)
