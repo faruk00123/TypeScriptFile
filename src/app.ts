@@ -200,16 +200,6 @@ class Obj{
         this.name = name
     }
 }
-const IdFun = <T extends Obj>(item: T):void=>{
-  console.log(item.id)
-  console.log(item.name)
-}
-
-IdFun({id: 200, name: "Omar"})
-function Fun2 <T extends Obj>(items: T):T{
-    return items
-}
-console.log(Fun2({id: 22, name: "Tamim"}))
 
 
 
