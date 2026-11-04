@@ -47,26 +47,7 @@ class Persone {
     }
 
     greet(){
-Constructor
-class AllData {
-    name: string;
-    age: number;
-    IsActive: boolean;
-    AllRoll: number[];
-    Info?: [string, number, boolean] 
-
-    constructor(name: string, age: number, IsActive: boolean, AllRoll: number[], Info: [string, number, boolean]){
-        this.name = name;
-        this.age = age;
-        this.IsActive = IsActive;
-        this.AllRoll = AllRoll;
-        this.Info = Info
-    }
-
-    GET(){
-        console.log(`Hello Md: ${this.name}`)
-    }
-}        console.log(`hello ${this.name}`)
+        console.log(`hello ${this.name}`)
     }
 }
 // user 1
@@ -85,7 +66,26 @@ user2.greet()
 
 
 // Constructor and modifiers (public, private, protected)
-//
+//Constructor
+class AllData {
+    name: string;
+    age: number;
+    IsActive: boolean;
+    AllRoll: number[];
+    Info?: [string, number, boolean] 
+
+    constructor(name: string, age: number, IsActive: boolean, AllRoll: number[], Info: [string, number, boolean]){
+        this.name = name;
+        this.age = age;
+        this.IsActive = IsActive;
+        this.AllRoll = AllRoll;
+        this.Info = Info
+    }
+
+    GET(){
+        console.log(`Hello Md: ${this.name}`)
+    }
+}
 
 const NewUser = new AllData("Omar", 21, false, [10, 201], ["tamim", 214, true])
 NewUser.GET()
