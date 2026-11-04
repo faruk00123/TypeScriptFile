@@ -47,26 +47,7 @@ class Persone {
     }
 
     greet(){
-        console.log(`hello ${this.name}`)
-    }
-}
-// user 1
-const user = new Persone;
-user.name = "Md. Omar"
-user.age = 21
-console.log(user.name ,"and", user.age)
-user.greet()
-
-// user 2
-const user2 = new Persone;
-user2.name = "Md. Faruk"
-user2.age = 20
-console.log(user2.name ,"and", user2.age)
-user2.greet()
-
-
-// Constructor and modifiers (public, private, protected)
-//Constructor
+Constructor
 class AllData {
     name: string;
     age: number;
@@ -85,7 +66,26 @@ class AllData {
     GET(){
         console.log(`Hello Md: ${this.name}`)
     }
+}        console.log(`hello ${this.name}`)
+    }
 }
+// user 1
+const user = new Persone;
+user.name = "Md. Omar"
+user.age = 21
+console.log(user.name ,"and", user.age)
+user.greet()
+
+// user 2
+const user2 = new Persone;
+user2.name = "Md. Faruk"
+user2.age = 20
+console.log(user2.name ,"and", user2.age)
+user2.greet()
+
+
+// Constructor and modifiers (public, private, protected)
+//
 
 const NewUser = new AllData("Omar", 21, false, [10, 201], ["tamim", 214, true])
 NewUser.GET()
