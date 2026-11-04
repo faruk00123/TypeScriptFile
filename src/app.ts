@@ -151,13 +151,6 @@ const MyCar = new Car;
 MyCar.start();
 MyCar.stop();
 
-
-// Project 
-interface Vehicle {
-    brand: string;
-    speed: number;
-    move(): void;
-}
 class Cara implements Vehicle{
     protected years: number = 2026
 
